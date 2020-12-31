@@ -163,7 +163,11 @@ a:hover {
   padding: 0% 2.5% 2.5% 2.5%;
 }
 
-.extra .extras .style_credit{
+.extra .extras .source {
+  text-align: right;
+}
+
+.extra .extras .style_credit {
   text-align: right;
 }
 
