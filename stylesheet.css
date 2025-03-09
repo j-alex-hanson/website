@@ -74,7 +74,7 @@ strong,
 a {
   color: #444444;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+  font-size: 16px
 }
 
 a {
@@ -90,13 +90,19 @@ a:hover {
 
 .container {
   background-color: #FFFFFF;
-  max-width: 800px;
+  max-width: 875px;
   margin: auto;
 }
 
 .header {
   display: flex;
   padding: 2.5%;
+}
+
+.header .headshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .pic {
@@ -111,7 +117,7 @@ a:hover {
 
 .header .description .name {
   text-align: center;
-  font-size: 32px;
+  font-size: 44px;
 }
 
 .header .description .contact {
@@ -119,44 +125,112 @@ a:hover {
 }
 
 .research .header {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 .paper {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
-.paper .img_default {
-  width: 160px;
-  height: 160px;
+.paper .teaser_container {
   position: relative;
-  padding: 20px;
+  width: 100%;
+  height: 200px;
+  /*height: 100%;*/
+  overflow: hidden;
 }
 
-.paper .img_hover {
-  width: 160px;
-  height: 160px;
+.paper .teaser_default {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.paper .teaser_hover {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.paper .teaser_default img,
+.paper .teaser_hover img,
+.paper .teaser_hover video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.paper:nth-child(4) .teaser_hover {
+  opacity: 0 !important; /* Force opacity to 0 on page load */
+  z-index: 2; /* Make sure it's behind the default image */
+}
+/* Only show on hover */
+.paper:nth-child(4):hover .teaser_hover {
+  opacity: 1 !important;
+}
+
+.paper .title-wrapper {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+}
+.paper .title-wrapper .title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.paper .authors {
+  text-align: center;
+}
+
+.paper .venue {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.paper .venue strong{
+  font-size: 18px;
 }
 
 .paper .description {
-  padding: 20px;
-  max-height: 200px;
-  box-sizing: border-box;
-
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 80%;
+  align-items: center;
+  text-align: center;
 }
 
-.paper .title {
-  font-weight: 700
+.papers hr{
+  width: 70%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 0;
+
 }
 
 .extra .header {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 .extra .extras {
@@ -171,9 +245,8 @@ a:hover {
   text-align: right;
 }
 
-
 /*Responsive*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 675px) {
 
   .header {
     flex-direction: column;
@@ -187,17 +260,22 @@ a:hover {
     margin-left: 0px;
   }
 
- .paper {
-   flex-direction: column;
-  }
+ /*.paper {*/
+   /*flex-direction: column;*/
+  /*}*/
 
- .paper .img_default {
-   margin: auto;
- }
+  /*.paper .teaser_container {*/
+    /*order: 1; */
+    /*height: 200px;*/
+  /*}*/
 
- .paper .description {
-   width: 100%;
-   height: 200px;
- }
+  /*.paper .description {*/
+    /*order: 2; */
+  /*}*/
+
+  /*.paper .description,*/
+  /*.paper .teaser_container {*/
+    /*width: 100%;*/
+  /*}*/
 
 }

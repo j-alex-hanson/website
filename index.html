@@ -9,19 +9,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="data/favicon.png">
   <script src="event_handlers.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="header">
-      <img class="pic" src="images/header_pic_256.png" alt="" />
+      <div class="headshot">
+        <img class="pic" src="data/header_pic_256.png" alt="" />
+      </div>
       <div class="description">
         <div class="name">Alex Hanson</div>
         <p>
-        Hello! I am a PhD student at the <a href="https://www.umd.edu" target="_blank" rel="noopener noreferrer">University of Maryland</a>.
-        My research areas are Computer Vision and Machine Learning. I was previously funded by the <a href="https://ndseg.sysplus.com" target="_blank" rel="noopener noreferrer">NDSEG Graduate Fellowship</a>.
+        I am a Ph.D. candidate in Computer Science at the <a href="https://www.umd.edu" target="_blank" rel="noopener noreferrer">University of Maryland</a>, advised by <a href="https://www.cs.umd.edu/~tomg" target="_blank" rel="noopener noreferrer">Prof. Tom Goldstein</a>.
+        I hold an M.Sc. in Computer Science from the University of Maryland and dual B.Sc. degrees in Mathematics and Mechanical Engineering from the <a href="https://illinois.edu" target="_blank" rel="noopener noreferrer">University of Illinois</a>.
+        </p>
+        <p>
+        My research interests span Computer Vision, Machine Learning, and Computer Graphics, with a focus on 3D scene reconstruction.
+        </p>
+        <p>
+        Previously, I interned at <a href="https://www.amazon.jobs/content/en/teams/amazon-entertainment/amazon-mgm-studios" target="_blank" rel="noopener noreferrer">Amazon Studios</a> and was awarded the <a href="https://ndseg.sysplus.com" target="_blank" rel="noopener noreferrer">NDSEG Graduate Fellowship</a>.
         </p>
         <p class="contact">
           <a href="mailto:hanson@cs.umd.edu">Email</a> &nbsp|&nbsp
@@ -40,229 +48,203 @@
 
       <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
 
-        <div class="img_default">
-          <div class="img_hover" >
-            <img src="images/pup/PUP.jpg">
+        <div class="teaser_container">
+          <div class="teaser_default">
+            <img src="data/speedy/speedy.png">
           </div>
-          <img src="images/pup/3DGS.jpg">
+          <div class="teaser_hover">
+            <img src="data/speedy/speedy.mp4">
+          </div>
         </div>
 
-        <div class="description">
-
-          <a href="https://arxiv.org/abs/2406.10219" class="title" target="_blank" rel="noopener noreferrer">
-          PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting
-          </a>
-
-          <br>
-
+        <div class="title-wrapper">
+            <a href="https://arxiv.org/abs/2412.00578" class="title" target="_blank" rel="noopener noreferrer">
+              Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives
+            </a>
+        </div>
+        <div class="authors">
           <strong>Alex Hanson</strong>,
-          <a href="https://www.linkedin.com/in/allentu" target="_blank" rel="noopener noreferrer">Allen Tu</a>,
+          <a href="https://tuallen.github.io" target="_blank" rel="noopener noreferrer">Allen Tu</a>,
+          <a href="https://www.cs.umd.edu/people/geng" target="_blank" rel="noopener noreferrer">Geng Lin</a>,
+          <a href="https://vasusingla.github.io" target="_blank" rel="noopener noreferrer">Vasu Singla</a>,
+          <a href="https://www.cs.umd.edu/~zwicker/" target="_blank" rel="noopener noreferrer">Matthias Zwicker</a>,
+          <a href="https://www.cs.umd.edu/~tomg/" target="_blank" rel="noopener noreferrer">Tom Goldstein</a>
+        </div>
+        <div class="venue">
+          <strong>CVPR 2025</strong>
+        </div>
+        <div class="description">
+          We address two inefficiencies in the 3D-GS rendering pipeline by introducing a more efficient Gaussian localization algorithm and a novel training-time pruning technique.
+        </div>
+        <div class="links">
+          <a href="https://speedysplat.github.io" target="_blank" rel="noopener noreferrer">Project Page</a> |
+          <a href="https://arxiv.org/abs/2412.00578" target="_blank" rel="noopener noreferrer">arXiv</a> |
+          <a href="https://github.com/j-alex-hanson/speedy-splat" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+
+      </div>
+
+      <hr/>
+
+      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
+
+        <div class="teaser_container">
+          <div class="teaser_default">
+            <img src="data/pup/pup.png">
+          </div>
+          <div class="teaser_hover">
+            <img src="data/pup/pup.mp4">
+          </div>
+        </div>
+
+        <div class="title-wrapper">
+            <a href="https://arxiv.org/abs/2406.10219" class="title" target="_blank" rel="noopener noreferrer">
+              PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting
+            </a>
+        </div>
+        <div class="authors">
+          <strong>Alex Hanson</strong>*,
+          <a href="https://tuallen.github.io" target="_blank" rel="noopener noreferrer">Allen Tu*</a>,
           <a href="https://vasusingla.github.io" target="_blank" rel="noopener noreferrer">Vasu Singla</a>,
           <a href="https://www.cs.umd.edu/people/mayukaj" target="_blank" rel="noopener noreferrer">Mayuka Jayawardhana</a>,
           <a href="https://www.cs.umd.edu/~zwicker/" target="_blank" rel="noopener noreferrer">Matthias Zwicker</a>,
           <a href="https://www.cs.umd.edu/~tomg/" target="_blank" rel="noopener noreferrer">Tom Goldstein</a>
-
-          <br>
-          <em>arXiv</em>, 2024
-          <br>
-
-          <a href="https://github.com/j-alex-hanson/gaussian-splatting-pup" target="_blank" rel="noopener noreferrer">code</a> |
-          <a href="https://pup3dgs.github.io" target="_blank" rel="noopener noreferrer">website</a> |
-          <a href="data/pup/HansonTuPup2024.bib" target="_blank" rel="noopener noreferrer">bibtex</a>
-
-          <p>
+        </div>
+        <div class="venue">
+          <strong>CVPR 2025</strong>
+        </div>
+        <div class="description">
           We find that the sensitivity of a Gaussian to the L2 loss across the scene -- captured as as a second order approximation -- is a surprisingly effective pruning score.
-          </p>
+        </div>
+        <div class="links">
+          <a href="https://pup3dgs.github.io" target="_blank" rel="noopener noreferrer">Project Page</a> |
+          <a href="https://arxiv.org/abs/2406.10219" target="_blank" rel="noopener noreferrer">arXiv</a> |
+          <a href="https://github.com/j-alex-hanson/gaussian-splatting-pup" target="_blank" rel="noopener noreferrer">Code</a>
         </div>
 
       </div>
 
-      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
+      <hr/>
 
-        <div class="img_default">
-          <div class="img_hover" >
-            <img src="images/face_bias/skewed_160.png">
+      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
+        <div class="teaser_container">
+          <div class="teaser_default">
+            <img src="data/face_bias/face_bias.png">
           </div>
-          <img src="images/face_bias/balanced_160.png">
+          <div class="teaser_hover">
+            <img src="data/face_bias/face_bias.gif">
+          </div>
         </div>
 
-        <div class="description">
-
+        <div class="title-wrapper">
           <a href="https://openaccess.thecvf.com/content/ICCV2021W/HTCV/html/Gwilliam_Rethinking_Common_Assumptions_To_Mitigate_Racial_Bias_in_Face_Recognition_ICCVW_2021_paper.html" class="title" target="_blank" rel="noopener noreferrer">
-          Rethinking Common Assumptions To Mitigate Racial Bias in Face Recognition Datasets
+            Rethinking Common Assumptions To Mitigate Racial Bias in Face Recognition Datasets
           </a>
+        </div>
 
-          <br>
-
+        <div class="authors">
           <a href="https://www.cs.umd.edu/people/mgwillia" target="_blank" rel="noopener noreferrer">Matthew Gwilliam</a>,
           <a href="https://srihegde.github.io" target="_blank" rel="noopener noreferrer">Srinidhi Hegde</a>,
           Lade Tinubu,&nbsp
           <strong>Alex Hanson</strong>
-
-          <br>
-          <em>ICCV Workshops</em>, 2021 (Oral)
-          <br>
-
-          <a href="https://github.com/j-alex-hanson/rethinking-race-face-datasets" target="_blank" rel="noopener noreferrer">code</a> |
-          <a href="data/face_bias/GwilliamRethinking2021.bib" target="_blank" rel="noopener noreferrer">bibtex</a>
-
-          <p>
-          Training on some skewed race distributions of a popular training dataset to mitigate racial bias produces more equitable models.
-          </p>
         </div>
-
+        <div class="venue">
+          <strong>ICCV Workshops 2021 - HTCV Workshop Best Paper Runner-Up</strong>
+        </div>
+        <div class="description">
+            Training on some skewed race distributions of a popular training dataset to mitigate racial bias produces more equitable models.
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2109.03229" target="_blank" rel="noopener noreferrer">arXiv</a> |
+          <a href="https://github.com/j-alex-hanson/rethinking-race-face-datasets" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
       </div>
 
+      <hr/>
+
       <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
-
-        <div class="img_default">
-          <div class="img_hover" >
-            <img src="images/svmax/svd_true_016_160.png">
+        <div class="teaser_container">
+          <div class="teaser_default">
+            <img src="data/svmax/svmax_False.png">
           </div>
-          <img src="images/svmax/svd_false_016_160.png">
+          <div class="teaser_hover">
+            <img src="data/svmax/svmax_True.png">
+          </div>
         </div>
-
-        <div class="description">
-
+        <div class="title-wrapper">
           <a href="http://arxiv.org/abs/2103.02770" class="title" target="_blank" rel="noopener noreferrer">
-          SVMax: A Feature Embedding Regularizer
+            SVMax: A Feature Embedding Regularizer
           </a>
-
-          <br>
-
+        </div>
+        <div class="authors">
           <a href="http://www.cs.umd.edu/~ahmdtaha/" target="_blank" rel="noopener noreferrer">Ahmed Taha</a>,&nbsp
           <strong>Alex Hanson</strong>,
           <a href="https://www.cs.umd.edu/~abhinav/" target="_blank" rel="noopener noreferrer">Abhinav Shrivastava</a>,
           <a href="https://www.cs.umd.edu/people/lsdavis" target="_blank" rel="noopener noreferrer">Larry Davis</a>
-
-          <br>
-          <em>arXiv</em>, 2021
-          <br>
-
-          <a href="https://github.com/ahmdtaha/svmax" target="_blank" rel="noopener noreferrer">code</a> |
-          <a href="https://ahmdtaha.github.io/paper/arxiv_ahmed_svmax" target="_blank" rel="noopener noreferrer">website</a> |
-          <a href="data/svmax/TahaSvmax2021.bib" target="_blank" rel="noopener noreferrer">bibtex</a>
-
-          <p>
-          Spreading out feature embeddings via SVD improves image retreival and mitigates model collapse.
-          </p>
         </div>
-
+        <div class="venue">
+          <strong>arXiv 2021</strong>
+        </div>
+        <div class="description">
+            Spreading out feature embeddings via SVD improves image retreival and mitigates model collapse.
+        </div>
+        <div class="links">
+          <a href="https://ahmdtaha.github.io/paper/arxiv_ahmed_svmax" target="_blank" rel="noopener noreferrer">Project Page</a> |
+          <a href="https://arxiv.org/abs/2109.03229" target="_blank" rel="noopener noreferrer">arXiv</a> |
+          <a href="https://github.com/ahmdtaha/svmax" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
       </div>
 
-      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
+      <hr/>
 
-        <div class="img_default">
-          <div class="img_hover" >
-            <img src="images/violence/hockey_160.gif">
+      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
+        <div class="teaser_container">
+          <div class="teaser_default">
+            <img src="data/violence/hockey.png">
           </div>
-          <img src="images/violence/hockey_160.png">
+          <div class="teaser_hover">
+            <img src="data/violence/hockey.gif">
+          </div>
         </div>
 
-        <div class="description">
-
-          <a href="https://openaccess.thecvf.com/content_eccv_2018_workshops/w10/html/Hanson_Bidirectional_Convolutional_LSTM_for_the_Detection_of_Violence_in_Videos_ECCVW_2018_paper.html" class="title" target="_blank" rel="noopener noreferrer">
-          Bidirectional Convolutional LSTM for the Detection of Violence in Videos
+        <div class="title-wrapper">
+          <a href="https://openaccess.thecvf.com/content_eccv_2018_workshops/w10/html/hanson_bidirectional_convolutional_lstm_for_the_detection_of_violence_in_videos_eccvw_2018_paper.html" class="title" target="_blank" rel="noopener noreferrer">
+            Bidirectional Convolutional LSTM for the Detection of Violence in Videos
           </a>
-
-          <br>
-
+        </div>
+        <div class="authors">
           <strong>Alex Hanson*</strong>,
           <a href="https://koutilya-pnvr.github.io" target="_blank" rel="noopener noreferrer">Koutilya PNVR*</a>,
           Sanjukta Krishnagopal,
           <a href="https://www.cs.umd.edu/people/lsdavis" target="_blank" rel="noopener noreferrer">Larry Davis</a>
-
-          <br>
-          <em>ECCV Workshops</em>, 2018
-          <br>
-
-          <a href="https://github.com/koutilya-pnvr/BiConvLSTM_Violence_Detection" target="_blank" rel="noopener noreferrer">code</a> |
-          <a href="https://github.com/j-alex-hanson/Posters/blob/main/Violence_in_Videos_Poster.pdf" target="_blank" rel="noopener noreferrer">poster</a> |
-          <a href="data/violence/HansonViol2018.bib" target="_blank" rel="noopener noreferrer">bibtex</a>
-
-          <p>
-          Two new architectures for detecting violence in videos from differnt violence domains.
-          </p>
-
         </div>
-
-      </div>
-
-      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
-
-        <div class="img_default">
-          <div class="img_hover">
-            <img src="images/rgbd_multidepth/rgb_160.png">
-          </div>
-          <img src="images/rgbd_multidepth/depth_160.png">
+        <div class="venue">
+          <strong>ECCV Workshops 2018</strong>
         </div>
-
         <div class="description">
-
-          <a href="https://github.com/j-alex-hanson/Class-Projects/blob/master/Depth_Map_Reconstruction.pdf" class="title" target="_blank" rel="noopener noreferrer">
-          Depth Map Reconstruction
-          </a>
-
-          <br>
-
-          <strong>Alex Hanson</strong>,
-          Daniel Lichy
-
-          <br>
-          <em>Class Project</em>, 2019
-          <br>
-
-          <p>
-          Reconstruct multi-view depth maps from a single RGB or depth image source.
-          </p>
-
+            Two new architectures for detecting violence in videos from differnt violence domains.
+        </div>
+        <div class="links">
+          <a href="Bidirectional_Convolutional_LSTM_for_the_Detection_of_Violence_in_Videos" target="_blank" rel="noopener noreferrer">Paper</a> |
+          <a href="https://github.com/koutilya-pnvr/BiConvLSTM_Violence_Detection" target="_blank" rel="noopener noreferrer">Code</a> |
+          <a href="https://github.com/j-alex-hanson/Posters/blob/main/Violence_in_Videos_Poster.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
         </div>
 
       </div>
-
-      <div class="paper" onmouseout="stop_hover(event, this)" onmouseover="start_hover(event, this)">
-
-        <div class="img_default">
-          <div class="img_hover" >
-            <img src="images/recurrent_pred/post_160.png" width="160">
-          </div>
-          <img src="images/recurrent_pred/pre_160.png" width="160">
-        </div>
-
-        <div class="description">
-
-          <a href="https://github.com/j-alex-hanson/Class-Projects/blob/master/Recurrent_Predictive_Processing_For_Image_Classification.pdf" class="title" target="_blank" rel="noopener noreferrer">
-          Recurrent Predictive Processing For Image Classification
-          </a>
-
-          <br>
-
-          <strong>Alex Hanson</strong>,
-          Ryen Krusinga,
-          Julian Vanecek
-
-          <br>
-          <em>Class Project</em>, 2018
-          <br>
-
-          <p>
-          Image classification by predicting where to look next in an image.
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
+
 
     <div class="extra">
       <div class="header" >Extra</div>
 
       <div class="extras">
         <p>
-        I enjoy doing puzzles in my free time, including escape room / puzzle hunt type puzzles, and have even written a few:
-        <br>
-        <a href="images/extra/Harry_Potter_Puzzle.png" target="_blank" rel="noopener noreferrer">Harry Potter</a> and <a href="images/extra/The_Giver_Puzzle.png" target="_blank" rel="noopener noreferrer">The Giver</a>.
+        I enjoy creating and solving puzzles in my free time, including escape room / puzzle hunt type puzzles.
+        </p>
+        <p>
+        Here are two of my puzzles that have appeared in past UMD puzzle hunts:
+        </br>
+        <a href="data/extra/Harry_Potter_Puzzle.png" target="_blank" rel="noopener noreferrer">Harry Potter</a> and <a href="data/extra/The_Giver_Puzzle.png" target="_blank" rel="noopener noreferrer">The Giver</a>.
         </p>
         <p class="source">
         <a href="https://github.com/j-alex-hanson/website" target="_blank" rel="noopener noreferrer">Source Code</a>
