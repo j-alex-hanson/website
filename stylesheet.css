@@ -82,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+strong.red {
+  color: #f72585;
+}
+
 a:focus,
 a:hover {
   color: #f72585;
