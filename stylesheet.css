@@ -115,7 +115,10 @@ a:hover {
 }
 
 .header .description {
-  padding: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
   margin-left: 18px;
 }
 
